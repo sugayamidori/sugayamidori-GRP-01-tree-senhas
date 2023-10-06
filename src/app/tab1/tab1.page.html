@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Projeto Mobile - Senhas
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-input readonly="true" label="Senha:" value="{{inputNovaSenha}}"></ion-input>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="senhaService.somaGeral()">Senha Geral</ion-button>
+      <ion-button expand="block" (click)="senhaService.somaPrior()">Senha Prioritária</ion-button>
+      <ion-button expand="block" (click)="senhaService.somaExame()">Senha Exame</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
